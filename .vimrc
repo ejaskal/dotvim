@@ -1,4 +1,9 @@
 scriptencoding utf-8
+
+"Enable Pathogen plugin
+call pathogen#infect()
+call pathogen#helptags()
+
 syntax on
 set nu
 set tabstop=4 "setting Tab size 
@@ -11,9 +16,6 @@ set wildmenu
 
 colorscheme elflord
 
-"Enable Pathogen plugin
-call pathogen#infect()
-call pathogen#helptags()
 
 "OmniCompletion (aka InteliSence) on
 filetype plugin on
