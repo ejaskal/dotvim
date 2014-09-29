@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/evzen/Dropbox/JS/tastejs-todomvc-b29e998/dependency-examples/backbone_require/js/views'
+let g:netrw_dirhist_2='/home/evzen/Dropbox/JS/tastejs-todomvc-b29e998/dependency-examples/backbone_require/js'
+let g:netrw_dirhist_3='/home/evzen/Dropbox/JS/tastejs-todomvc-b29e998/dependency-examples/backbone_require/js/views'
+let g:netrw_dirhist_4='/home/evzen/Dropbox/JS/tastejs-todomvc-b29e998/dependency-examples/backbone_require/js'
+let g:netrw_dirhist_5='/home/evzen/Dropbox/JS/tastejs-todomvc-b29e998/dependency-examples/backbone_require/js/collections'
+let g:netrw_dirhist_6='/home/evzen/Dropbox/JS/tastejs-todomvc-b29e998/dependency-examples/backbone_require/js'
+let g:netrw_dirhist_7='/home/evzen/Dropbox/JS/tastejs-todomvc-b29e998/dependency-examples/backbone_require/js/models'
+let g:netrw_dirhist_8='/home/evzen/Dropbox/JS/tastejs-todomvc-b29e998/dependency-examples/backbone_require/js/views'
+let g:netrw_dirhist_9='/home/evzen/Dropbox/JS/tastejs-todomvc-b29e998/dependency-examples/backbone_require/js'
