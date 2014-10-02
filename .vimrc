@@ -12,6 +12,7 @@ set shiftwidth=4 "size of indent
 " other than the (hard)tabstop
 set softtabstop=4 "
 nnoremap <silent> <F9> :TagbarToggle<CR>
+nmap <silent> <F8> :NERDTreeToggle<CR>
 set wildmenu
 
 colorscheme elflord
