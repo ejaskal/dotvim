@@ -1,4 +1,7 @@
+"Basic settings
 scriptencoding utf-8
+set tw=80
+set colorcolumn=81
 
 "Enable Pathogen plugin
 call pathogen#infect()
