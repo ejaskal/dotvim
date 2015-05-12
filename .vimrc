@@ -1,11 +1,16 @@
 "Basic settings
 scriptencoding utf-8
+"80 chars text width + 81 red line column
 set tw=80
 set colorcolumn=81
 
 "Enable Pathogen plugin
 call pathogen#infect()
 call pathogen#helptags()
+
+"CloseTag configuration: lunch for html/xml like files only
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1 
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
 
 syntax on
 set nu
