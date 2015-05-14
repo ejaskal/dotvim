@@ -1,33 +1,42 @@
 "Basic settings
 scriptencoding utf-8
+colorscheme elflord
+set nu
+syntax on
+
 "80 chars text width + 81 red line column
 set tw=80
 set colorcolumn=81
-
 "Enable Pathogen plugin
 call pathogen#infect()
 call pathogen#helptags()
+"enable smartindent
+filetype plugin on
+filetype plugin indent on
 
-"CloseTag configuration: lunch for html/xml like files only
-autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1 
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+"Emmet settings:
+let g:user_emmet_install_global=0
+autocmd FileType html,xhml,xml,css,eruby EmmetInstall
 
-syntax on
-set nu
-set tabstop=4 "setting Tab size 
-set shiftwidth=4 "size of indent
+"setting Tab size 
+set tabstop=4
+"size of indent 
+set shiftwidth=4 
 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
-set softtabstop=4 "
+set softtabstop=4
+" always uses spaces instead of tab characters
+set expandtab
+" make 'tab' insert indents instead of tabs at the beginning of a line
+set smarttab
+
+
 nnoremap <silent> <F9> :TagbarToggle<CR>
 nmap <silent> <F8> :NERDTreeToggle<CR>
+"setting wildmenu
 set wildmenu
 
-colorscheme elflord
-
-
 "OmniCompletion (aka InteliSence) on
-filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 "Uset SuperTab for OmniCompletion 
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
