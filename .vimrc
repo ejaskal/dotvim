@@ -4,7 +4,7 @@ scriptencoding utf-8
 syntax on " turn syntax highlight on
 set number
 colorscheme default " define colorscheme for syntax highlight
-"set background=dark " when dark VIM will try to use colors that look good on dark background
+set background=dark " when dark VIM will try to use colors that look good on dark background
 "colorscheme elflord
 
 set showcmd " Show (partial) command in status line
