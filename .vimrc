@@ -1,41 +1,27 @@
-"Basic settings
+"General settings
 "-------------------------------------------------------------------------------
-scriptencoding utf-8 
+scriptencoding utf-8
+source ~/.vim/plugins.vim " Load plugins from vundle
+set history=1000 " Set history size to 1000 cmds
+set laststatus=2 " Always display status line
+
+"Interface settings
+"-------------------------------------------------------------------------------
 syntax on " turn syntax highlight on
 set number
 colorscheme default " define colorscheme for syntax highlight
 set background=dark " when dark VIM will try to use colors that look good on dark background
 "colorscheme elflord
 
-
-" Vundle - vim plugin manager settings
-"------------------------------------------------------------------------------
-filetype off
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Bundle 'gmarik/Vundle.vim'
-
-"List of plugins
-Bundle 'kien/ctrlp.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-rails'
-
-call vundle#end()
-
-"Interface settings
-"-------------------------------------------------------------------------------
 set showcmd " Show (partial) command in status line
 set showmatch " When a bracket is inserted, briefly jumpt to the matching one.
 set ruler " Show the line and column number of the cursor position
+set wildmenu " Set wildmenu
 
 set tw=80 " number of columns before an automatic line break is inserted 
 set colorcolumn=81 " highlight column 81 with red color
 set linebreak " (lbr) wrap long lines at a space instead of in the middle of the word
+
 
 "General indent settings
 "-------------------------------------------------------------------------------
@@ -46,8 +32,6 @@ set softtabstop=4 " a combination of spaces and tabs are used to simulate tab st
 set expandtab " always uses spaces instead of tab characters
 set smarttab " make <tab> insert indents instead of tabs at the beginning of a line
 
-"setting wildmenu
-set wildmenu
 
 "Emmet settings:
 let g:user_emmet_install_global=0
@@ -63,26 +47,62 @@ highlight PmenuSel		ctermfg=0 ctermbg=7
 highlight PmenuSbar		ctermfg=7 ctermbg=0
 highlight PmenuThumb	ctermfg=0 ctermbg=7
 
-"File specific settings
+"Filetype specific settings
 "-------------------------------------------------------------------------------
 filetype plugin indent on " enable indent setting based on filetype
 "HTML/XML file settings
-au FileType xhtml,html,htm,xml setlocal tw=0 colorcolumn=0 "no textwidth for *html/xml files
-au FileType xhtml,html,htm,xml setlocal tabstop=2  
-au FileType xhtml,html,htm,xml setlocal shiftwidth=2  
-au FileType xhtml,html,htm,xml setlocal softtabstop=2
+au FileType xhtml,html,htm,xml setlocal tw=0 colorcolumn=0 " no textwidth for *html/xml files
+au FileType xhtml,html,htm,xml setlocal ts=2 sts=2 sw=2
 
-au FileType html,xhml,xml,css,eruby EmmetInstall "use Emmet for *html/xml only
+au FileType html,xhml,xml,css,eruby EmmetInstall " use Emmet for *html/xml only
 
 "Settings for ruby
-au FileType ruby setlocal tabstop=2  
-au FileType ruby setlocal shiftwidth=2  
-au FileType ruby setlocal softtabstop=2
+au FileType ruby setlocal ts=2 sw=2 sts=2
 
 
 "Custom key shortcut
 "-------------------------------------------------------------------------------
+
+" remap esc to jj exit the insert and replace mode
+inoremap jj <esc>
+
 "<F8> togle NERDTree plugin
 nmap <silent> <F8> :NERDTreeToggle<CR> 
 "<F9> toggle Tagbar plugin
-nnoremap <silent> <F9> :TagbarToggle<CR> 
+nmap <silent> <F9> :TagbarToggle<CR> 
+
+"Move between windows using h,j,k,l
+map <silent> <C-h> :call WinMove('h')<cr>
+map <silent> <C-j> :call WinMove('j')<cr>
+map <silent> <C-k> :call WinMove('k')<cr>
+map <silent> <C-l> :call WinMove('l')<cr>
+
+
+
+" Files, backups and undo
+" ------------------------------------------------------------------------------
+
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
+
+
+"Functions
+"-------------------------------------------------------------------------------
+
+" Window movement shortcuts
+" move to the window in the direction shown, or crete a new window
+"
+function! WinMove(key)
+    let t:curwin = winnr()
+    exec "wincmd ".a:key
+    if ( t:curwin == winnr())
+        if (match(a:key,'[jk]'))
+            wincmd v
+        else
+            wincmd s
+        endif
+        exec "wincmd ".a:key
+    endif
+endfunction
+
