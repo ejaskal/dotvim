@@ -7,6 +7,25 @@ colorscheme default " define colorscheme for syntax highlight
 set background=dark " when dark VIM will try to use colors that look good on dark background
 "colorscheme elflord
 
+
+" Vundle - vim plugin manager settings
+"------------------------------------------------------------------------------
+filetype off
+set runtimepath+=~/.vimrc/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmaric/vundle'
+
+Bundle 'kien/ctrlp.vim'
+Bundle 'mattn/emmet-vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+
+
+
+
 set showcmd " Show (partial) command in status line
 set showmatch " When a bracket is inserted, briefly jumpt to the matching one.
 set ruler " Show the line and column number of the cursor position
