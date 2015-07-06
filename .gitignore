@@ -1,0 +1,7 @@
+#Ignore VIM temporary and swap files
+*~
+*.sw??
+*.sw??
+
+#Ignore vim plugin directory (handled by Vundle)
+bundle/**

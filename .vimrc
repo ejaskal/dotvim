@@ -11,21 +11,24 @@ set background=dark " when dark VIM will try to use colors that look good on dar
 " Vundle - vim plugin manager settings
 "------------------------------------------------------------------------------
 filetype off
-set runtimepath+=~/.vimrc/bundle/vundle
-call vundle#rc()
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmaric/vundle'
+Bundle 'gmarik/Vundle.vim'
 
+"List of plugins
 Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-rails'
 
+call vundle#end()
 
-
-
+"Interface settings
+"-------------------------------------------------------------------------------
 set showcmd " Show (partial) command in status line
 set showmatch " When a bracket is inserted, briefly jumpt to the matching one.
 set ruler " Show the line and column number of the cursor position
@@ -45,13 +48,6 @@ set smarttab " make <tab> insert indents instead of tabs at the beginning of a l
 
 "setting wildmenu
 set wildmenu
-
-
-" VIM Plugins and addons
-"-------------------------------------------------------------------------------
-"Enable Pathogen plugin
-call pathogen#infect()
-call pathogen#helptags()
 
 "Emmet settings:
 let g:user_emmet_install_global=0
