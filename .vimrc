@@ -59,6 +59,11 @@ au FileType xhtml,html,htm,xml setlocal softtabstop=2
 
 au FileType html,xhml,xml,css,eruby EmmetInstall "use Emmet for *html/xml only
 
+"Settings for ruby
+au FileType ruby setlocal tabstop=2  
+au FileType ruby setlocal shiftwidth=2  
+au FileType ruby setlocal softtabstop=2
+
 
 "Custom key shortcut
 "-------------------------------------------------------------------------------
