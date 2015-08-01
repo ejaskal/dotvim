@@ -63,6 +63,24 @@ au FileType ruby setlocal ts=2 sw=2 sts=2
 "Custom key shortcut
 "-------------------------------------------------------------------------------
 
+" => Mapleader
+let mapleader = ","
+map <Leader>vi :tabe ~/.vimrc <CR>
+map <Leader>t  :tabe
+
+"Custom map for Ruby on Rails projects  
+map <Leader>trm :tabe app/models/
+map <Leader>trv :tabe app/views/
+map <Leader>trc :tabe app/controllers/
+map <Leader>trh :tabe app/helpers/
+map <Leader>tra :tabe app/assets/
+map <Leader>trt :tabe test/
+map <Leader>trd :tabe db/
+
+"Custom map open my tutorial folder:
+map <Leader>ttut :tabe ~/Dropbox/tutorials/
+
+
 " remap esc to jj exit the insert and replace mode
 inoremap jj <esc>
 
@@ -77,7 +95,9 @@ map <silent> <C-j> :call WinMove('j')<cr>
 map <silent> <C-k> :call WinMove('k')<cr>
 map <silent> <C-l> :call WinMove('l')<cr>
 
-
+" Remap save on Ctrl+s
+map <C-s> <esc>:w<CR>
+imap <C-s> <esc>:w<CR>
 
 " Files, backups and undo
 " ------------------------------------------------------------------------------
