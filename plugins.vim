@@ -16,6 +16,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'majutsushi/tagbar'
 
 "Ruby on Rails
 Plugin 'tpope/vim-rails'
