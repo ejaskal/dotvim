@@ -1,2 +1,0 @@
-tagbar.vmb: call delete('/home/evzen/.vim/autoload/tagbar.vim')|call delete('/home/evzen/.vim/doc/tagbar.txt')|call delete('/home/evzen/.vim/plugin/tagbar.vim')|call delete('/home/evzen/.vim/syntax/tagbar.vim')
-supertab.vmb: call delete('/home/evzen/.vim/doc/supertab.txt')|call delete('/home/evzen/.vim/plugin/supertab.vim')
