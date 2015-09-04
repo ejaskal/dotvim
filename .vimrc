@@ -1,6 +1,9 @@
 "General settings
 "-------------------------------------------------------------------------------
 scriptencoding utf-8
+set encoding=utf-8
+set fileencoding=utf-8
+
 source ~/.vim/plugins.vim " Load plugins from vundle
 set history=1000 " Set history size to 1000 cmds
 set laststatus=2 " Always display status line
