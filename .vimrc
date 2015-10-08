@@ -35,6 +35,9 @@ set softtabstop=4 " a combination of spaces and tabs are used to simulate tab st
 set expandtab " always uses spaces instead of tab characters
 set smarttab " make <tab> insert indents instead of tabs at the beginning of a line
 
+"IndentLine plugin custom settings
+"let g:indentLine_char = '┆'
+let g:indentLine_color_term = 9
 
 "Emmet settings:
 let g:user_emmet_install_global=0

@@ -17,6 +17,10 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'majutsushi/tagbar'
+"Indent plugin
+Plugin 'Yggdroot/indentLine'
+"Delimate plugin
+Plugin 'Raimondi/delimitMate'
 
 "Ruby on Rails
 Plugin 'tpope/vim-rails'
