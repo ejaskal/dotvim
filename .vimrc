@@ -28,9 +28,9 @@ set linebreak " (lbr) wrap long lines at a space instead of in the middle of the
 
 "General indent settings
 "-------------------------------------------------------------------------------
-set tabstop=4 " width (in spaces) that <tab> is displayed as 
-set shiftwidth=4 " width (in spaces) used in each step of autoindent
-set softtabstop=4 " a combination of spaces and tabs are used to simulate tab stops at a width
+set tabstop=2 " width (in spaces) that <tab> is displayed as 
+set shiftwidth=2 " width (in spaces) used in each step of autoindent
+set softtabstop=2 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
 set expandtab " always uses spaces instead of tab characters
 set smarttab " make <tab> insert indents instead of tabs at the beginning of a line
@@ -52,6 +52,11 @@ highlight Pmenu			ctermfg=0 ctermbg=2
 highlight PmenuSel		ctermfg=0 ctermbg=7
 highlight PmenuSbar		ctermfg=7 ctermbg=0
 highlight PmenuThumb	ctermfg=0 ctermbg=7
+
+
+"Ultisnips plugin settings
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "Filetype specific settings
 "-------------------------------------------------------------------------------
