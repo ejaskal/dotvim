@@ -17,15 +17,17 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'majutsushi/tagbar'
-"Indent plugin
+"Indent plugin - ident handling
 Plugin 'Yggdroot/indentLine'
-"Delimate plugin
+"Delimate plugin 
 Plugin 'Raimondi/delimitMate'
 "YouCompleteMe plugin - autocompletion
 Plugin 'Valloric/YouCompleteMe'
 "Snippet plugin + snippet lib
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+"Vim-airline plugin - status tabline
+Plugin 'bling/vim-airline'
 "Ruby on Rails
 Plugin 'tpope/vim-rails'
 
