@@ -12,6 +12,7 @@ set laststatus=2 " Always display status line
 "-------------------------------------------------------------------------------
 syntax on " turn syntax highlight on
 set number
+set t_Co=256 "Use 256 color scheme
 colorscheme default " define colorscheme for syntax highlight
 set background=dark " when dark VIM will try to use colors that look good on dark background
 "colorscheme elflord
@@ -60,6 +61,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "Vim-Airline plugin settings
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='luna'
 
 "Filetype specific settings
 "-------------------------------------------------------------------------------
