@@ -21,7 +21,11 @@ Plugin 'majutsushi/tagbar'
 Plugin 'Yggdroot/indentLine'
 "Delimate plugin
 Plugin 'Raimondi/delimitMate'
-
+"YouCompleteMe plugin - autocompletion
+Plugin 'Valloric/YouCompleteMe'
+"Snippet plugin + snippet lib
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 "Ruby on Rails
 Plugin 'tpope/vim-rails'
 
