@@ -58,6 +58,9 @@ highlight PmenuThumb	ctermfg=0 ctermbg=7
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+"Vim-Airline plugin settings
+let g:airline#extensions#tabline#enabled = 1
+
 "Filetype specific settings
 "-------------------------------------------------------------------------------
 filetype plugin indent on " enable indent setting based on filetype
