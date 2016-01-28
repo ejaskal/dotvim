@@ -40,6 +40,10 @@ set smarttab " make <tab> insert indents instead of tabs at the beginning of a l
 "let g:indentLine_char = '┆'
 let g:indentLine_color_term = 9
 
+
+"Plugins settings
+"-------------------------------------------------------------------------------
+
 "Emmet settings:
 let g:user_emmet_install_global=0
 
@@ -59,9 +63,23 @@ highlight PmenuThumb	ctermfg=0 ctermbg=7
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+
 "Vim-Airline plugin settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='luna'
+
+
+"Syntastic plugin settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
 
 "Filetype specific settings
 "-------------------------------------------------------------------------------
@@ -82,6 +100,7 @@ au FileType ruby setlocal ts=2 sw=2 sts=2
 " => Mapleader
 let mapleader = ","
 map <Leader>vi :tabe ~/.vimrc <CR>
+map <Leader>vip :tabe ~/.vim/plugins.vim <CR>
 map <Leader>t  :tabe
 
 "Custom map for Ruby on Rails projects  
