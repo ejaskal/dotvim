@@ -27,7 +27,9 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 "Vim-airline plugin - status tabline
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'bling/vim-airline'
 "Ruby on Rails
 Plugin 'tpope/vim-rails'
 
