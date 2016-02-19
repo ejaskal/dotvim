@@ -101,7 +101,7 @@ au FileType ruby setlocal ts=2 sw=2 sts=2
 let mapleader = ","
 map <Leader>vi :tabe ~/.vimrc <CR>
 map <Leader>vip :tabe ~/.vim/plugins.vim <CR>
-map <Leader>t  :tabe
+map <Leader>t  :tabe<Space>
 
 "Custom map for Ruby on Rails projects  
 map <Leader>trm :tabe app/models/
