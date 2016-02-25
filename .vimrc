@@ -48,10 +48,9 @@ let g:indentLine_color_term = 9
 let g:user_emmet_install_global=0
 
 "OmniCompletion (aka InteliSence) on
-set omnifunc=syntaxcomplete#Complete
+"set omnifunc=syntaxcomplete#Complete
 "Uset SuperTab for OmniCompletion 
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "context"
 "Omnicompletion custom colors for tab
 highlight Pmenu			ctermfg=0 ctermbg=2
 highlight PmenuSel		ctermfg=0 ctermbg=7
@@ -59,9 +58,15 @@ highlight PmenuSbar		ctermfg=7 ctermbg=0
 highlight PmenuThumb	ctermfg=0 ctermbg=7
 
 
+"YCM, compitable with UltiSnips
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previos_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
 "Ultisnips plugin settings
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltisnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 
 "Vim-Airline plugin settings

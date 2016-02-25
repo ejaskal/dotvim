@@ -23,6 +23,8 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'Raimondi/delimitMate'
 "YouCompleteMe plugin - autocompletion
 Plugin 'Valloric/YouCompleteMe'
+"SuperTab plugin
+Plugin 'ervandew/supertab'
 "Snippet plugin + snippet lib
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
