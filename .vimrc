@@ -6,6 +6,7 @@ set fileencoding=utf-8
 
 source ~/.vim/plugins.vim " Load plugins from vundle
 set history=1000 " Set history size to 1000 cmds
+set undolevels=1000 " use many levels of undo
 set laststatus=2 " Always display status line
 
 set hidden " Set buffers hidden instead of close once open another file
@@ -105,6 +106,11 @@ au FileType ruby setlocal ts=2 sw=2 sts=2
 "-------------------------------------------------------------------------------
 "Replace ; with :
 nnoremap ; :
+"Stop using arrows
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 
 " => Mapleader
 let mapleader = ","
