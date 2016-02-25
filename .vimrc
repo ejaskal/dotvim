@@ -104,21 +104,32 @@ au FileType ruby setlocal ts=2 sw=2 sts=2
 
 " => Mapleader
 let mapleader = ","
-map <Leader>vi :tabe ~/.vimrc <CR>
-map <Leader>vip :tabe ~/.vim/plugins.vim <CR>
+
+"Tab mapping
 map <Leader>t  :tabe<Space>
 
+"Buffer mapping
+map <Leader>b :badd<Space>
+map <Leader>bn :badd <CR>
+map <Leader>bk :bprevious<CR>
+map <Leader>bj :bnext<CR>
+map <Leader>bl :ls<CR>
+
+"VIM config shortcuts
+map <Leader>vi :badd ~/.vimrc <CR>
+map <Leader>vip :badd ~/.vim/plugins.vim <CR>
+
 "Custom map for Ruby on Rails projects  
-map <Leader>trm :tabe app/models/
-map <Leader>trv :tabe app/views/
-map <Leader>trc :tabe app/controllers/
-map <Leader>trh :tabe app/helpers/
-map <Leader>tra :tabe app/assets/
-map <Leader>trt :tabe test/
-map <Leader>trd :tabe db/
+map <Leader>brm :badd app/models/
+map <Leader>brv :badd app/views/
+map <Leader>brc :badd app/controllers/
+map <Leader>brh :badd app/helpers/
+map <Leader>bra :badd app/assets/
+map <Leader>brt :badd test/
+map <Leader>brd :badd db/
 
 "Custom map open my tutorial folder:
-map <Leader>ttut :tabe ~/Dropbox/tutorials/
+map <Leader>btut :badd ~/Dropbox/tutorials/
 
 
 " remap esc to jj exit the insert and replace mode
