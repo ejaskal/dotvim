@@ -8,6 +8,8 @@ source ~/.vim/plugins.vim " Load plugins from vundle
 set history=1000 " Set history size to 1000 cmds
 set laststatus=2 " Always display status line
 
+set hidden " Set buffers hidden
+
 "Interface settings
 "-------------------------------------------------------------------------------
 syntax on " turn syntax highlight on
@@ -109,10 +111,10 @@ let mapleader = ","
 map <Leader>t  :tabe<Space>
 
 "Buffer mapping
-map <Leader>b :badd<Space>
-map <Leader>bk :bprevious<CR>
-map <Leader>bj :bnext<CR>
-map <Leader>bl :ls<CR>
+map <Leader>b :b<Space>
+map <Leader>k :bp<CR>
+map <Leader>j :bn<CR>
+map <Leader>ba :badd<Space>
 
 "VIM config shortcuts
 map <Leader>vi :badd ~/.vimrc <CR>
