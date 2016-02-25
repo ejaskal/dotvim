@@ -8,7 +8,7 @@ source ~/.vim/plugins.vim " Load plugins from vundle
 set history=1000 " Set history size to 1000 cmds
 set laststatus=2 " Always display status line
 
-set hidden " Set buffers hidden
+set hidden " Set buffers hidden instead of close once open another file
 
 "Interface settings
 "-------------------------------------------------------------------------------
@@ -103,6 +103,8 @@ au FileType ruby setlocal ts=2 sw=2 sts=2
 
 "Custom key shortcut
 "-------------------------------------------------------------------------------
+"Replace ; with :
+nnoremap ; :
 
 " => Mapleader
 let mapleader = ","
