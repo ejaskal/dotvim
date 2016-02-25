@@ -110,7 +110,6 @@ map <Leader>t  :tabe<Space>
 
 "Buffer mapping
 map <Leader>b :badd<Space>
-map <Leader>bn :badd <CR>
 map <Leader>bk :bprevious<CR>
 map <Leader>bj :bnext<CR>
 map <Leader>bl :ls<CR>
