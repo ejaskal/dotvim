@@ -155,9 +155,6 @@ map <silent> <C-j> :call WinMove('j')<cr>
 map <silent> <C-k> :call WinMove('k')<cr>
 map <silent> <C-l> :call WinMove('l')<cr>
 
-" Remap save on Ctrl+s
-map <C-s> <esc>:w<CR>
-imap <C-s> <esc>:w<CR>
 
 " Files, backups and undo
 " ------------------------------------------------------------------------------
