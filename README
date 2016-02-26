@@ -1,38 +1,38 @@
 Common:
-    Vundle is used as plugin manager
+Vundle is used as plugin manager
 
 Installation: 
 
-	git clone https://github.com/ejaskal/dotvim.git ~/.vim
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/ejaskal/vim.git ~/.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 
 Create symlinks:
-	
-	ln -s ~/.vim/.vimrc ~/.vimrc
+
+ln -s ~/.vim/.vimrc ~/.vimrc
 
 Plugin installation:
-    Run next command in vim
+Run next command in vim
 
-    :PluginInstall
+:PluginInstall
 
 YouCompleteMe installaction short (full version check on
-github.com/Valloric/YouCompleteMe):
+    github.com/Valloric/YouCompleteMe):
 
-1. Check if VIM version >= 7.3
-2. Check if VIM compiled with pythong support ( :echo has('python') ) . If not
-install vim-nox
-3. Install YCM (should be already in plugin.vim config file)
-4. Install cmake and python-dev ( apt-get install cmake python-dev)
-5. Run next commands:
+  1. Check if VIM version >= 7.3
+  2. Check if VIM compiled with pythong support ( :echo has('python') ) . If not
+  install vim-nox
+  3. Install YCM (should be already in plugin.vim config file)
+  4. Install cmake and python-dev ( apt-get install cmake python-dev)
+  5. Run next commands:
 #create build directory
-$cd ~/ && mkdir ycm_build && cd ycm_build
+  $cd ~/ && mkdir ycm_build && cd ycm_build
 
 #generate makefiles
-$cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+  $cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 
 #Compile libraries
-$cmake --build . --target ycm_support_libs --config Release
+  $cmake --build . --target ycm_support_libs --config Release
 
 
 
