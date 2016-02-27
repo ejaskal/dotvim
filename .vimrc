@@ -1,5 +1,6 @@
 "General settings
 "-------------------------------------------------------------------------------
+set nocompatible
 scriptencoding utf-8
 set encoding=utf-8
 set fileencoding=utf-8
@@ -32,6 +33,8 @@ set linebreak " (lbr) wrap long lines at a space instead of in the middle of the
 
 "General indent settings
 "-------------------------------------------------------------------------------
+set autoindent  " always set autoindent on 
+set copyindent  " copy the previous indentation on autoindenting
 set tabstop=2 " width (in spaces) that <tab> is displayed as 
 set shiftwidth=2 " width (in spaces) used in each step of autoindent
 set softtabstop=2 " a combination of spaces and tabs are used to simulate tab stops at a width
@@ -42,6 +45,13 @@ set smarttab " make <tab> insert indents instead of tabs at the beginning of a l
 "IndentLine plugin custom settings
 "let g:indentLine_char = '┆'
 let g:indentLine_color_term = 9
+
+"Search setting
+"-------------------------------------------------------------------------------
+set ignorecase  " ignore case when searching
+set smartcase   " ignore case if search ptrn is all lowercase
+set hlsearch    " highlight search terms
+set incsearch   " show search matches as you type
 
 
 "Plugins settings
@@ -99,7 +109,21 @@ au FileType xhtml,html,htm,xml setlocal ts=2 sts=2 sw=2
 au FileType html,xhml,xml,css,eruby EmmetInstall " use Emmet for *html/xml only
 
 "Settings for ruby
-au FileType ruby setlocal ts=2 sw=2 sts=2
+au FileType ruby setlocal ts=2 sw=2 sts=2 expandtab
+
+"Javascript
+au FileType javascript setlocal sw=2 ts=2 sts=2 expandtab
+au FileType javascript setlocal commentstring=//\ %s
+let javascript_enable_domhtmlcss=1
+let g:syntastic_javascript_checkers = ['jshint']
+
+"Java
+au FileType java setlocal sw=2 ts=8 sts=2 expandtab
+au FileType java setlocal commentstring=//\ %s
+
+"VIM
+au FileType vim setlocal sw=2 ts=2 sts=2 expandtab
+
 
 
 "Custom key shortcut
@@ -120,8 +144,8 @@ map <Leader>t  :tabe<Space>
 
 "Buffer mapping
 map <Leader>b :b<Space>
-map <Leader>k :bp<CR>
-map <Leader>j :bn<CR>
+map <Leader>h :bp<CR>
+map <Leader>l :bn<CR>
 map <Leader>ba :badd<Space>
 
 "VIM config shortcuts
