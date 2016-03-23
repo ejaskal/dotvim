@@ -12,6 +12,9 @@ set laststatus=2 " Always display status line
 
 set hidden " Set buffers hidden instead of close once open another file
 
+set splitbelow " Split horizontaly below
+set splitright " Split vertically right
+
 "Interface settings
 "-------------------------------------------------------------------------------
 syntax on " turn syntax highlight on
@@ -174,10 +177,10 @@ nmap <silent> <F8> :NERDTreeToggle<CR>
 nmap <silent> <F9> :TagbarToggle<CR> 
 
 "Move between windows using h,j,k,l
-map <silent> <C-h> :call WinMove('h')<cr>
-map <silent> <C-j> :call WinMove('j')<cr>
-map <silent> <C-k> :call WinMove('k')<cr>
-map <silent> <C-l> :call WinMove('l')<cr>
+noremap <C-H> <C-W><C-H>
+noremap <C-j> <C-W><C-J>
+noremap <C-k> <C-W><C-K>
+noremap <C-l> <C-W><C-L>
 
 
 " Files, backups and undo
