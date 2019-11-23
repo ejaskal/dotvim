@@ -13,7 +13,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
+"Syntax checking plugin
+"Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'majutsushi/tagbar'
@@ -22,7 +23,7 @@ Plugin 'Yggdroot/indentLine'
 "Delimate plugin 
 Plugin 'Raimondi/delimitMate'
 "YouCompleteMe plugin - autocompletion
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 "SuperTab plugin
 Plugin 'ervandew/supertab'
 "Snippet plugin + snippet lib
@@ -34,5 +35,10 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'bling/vim-airline'
 "Ruby on Rails
 Plugin 'tpope/vim-rails'
+"Plugin for TypeScript
+Plugin 'leafgarland/typescript-vim'
+"Plugin for Collaboration in VIM
+Plugin 'FredKSchott/CoVim'
+
 
 call vundle#end()
