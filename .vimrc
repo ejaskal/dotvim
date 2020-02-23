@@ -56,6 +56,12 @@ set smartcase   " ignore case if search ptrn is all lowercase
 set hlsearch    " highlight search terms
 set incsearch   " show search matches as you type
 
+"Folding settings
+"-------------------------------------------------------------------------------
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
 
 "Plugins settings
 "-------------------------------------------------------------------------------

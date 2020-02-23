@@ -39,6 +39,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'leafgarland/typescript-vim'
 "Plugin for Collaboration in VIM
 Plugin 'FredKSchott/CoVim'
-
+"Plugin for supporting Rust lang
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
